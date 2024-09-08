@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dynamic Resume Builder</h1>
+
+    <form id="resumeForm">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="profileImage">Profile Image:</label>
+            <input type="file" id="profileImage" name="profileImage" accept="image/*"> <br>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required> <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required> <br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required> <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Details</legend>
+            <label for="education">Education:</label>
+            <textarea id="education" name="education" rows="4" required></textarea> <br>
+
+            <label for="experience">Experience:</label>
+            <textarea id="experience" name="experience" rows="4" required></textarea> <br>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" rows="4" required></textarea> <br>
+        </fieldset>
+
+        <button type="submit" id="generateResume">Generate Resume</button>
+    </form>
+
+    <div id="resumeOutput" style="display:none;">
+        <button id="editResume">Edit Resume</button>
+        <div id="resumeContent"></div>
+        <div id="resumeLinkContainer">
+            <label for="resumeLink">Resume Link:</label>
+            <input type="text" id="resumeLink" readonly>
+            <button id="copyLink">Copy Link</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
